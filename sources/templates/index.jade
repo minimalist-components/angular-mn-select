@@ -1,0 +1,51 @@
+html(ng-app='app')
+  meta(name='viewport' content='width=device-width, user-scalable=no')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans')
+  link(rel='stylesheet' href='styles/vendor.css')
+  link(rel='stylesheet' href='angular-mn-password.css')
+  style.
+    body {
+      font-family: 'Open Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+body
+  form(ng-controller='IndexController as controller' name='form' novalidate ng-submit='controller.validate()')
+    h2 mn-password
+    div
+      mn-password(placeholder='Password' ng-model='controller.credentials.password' name='password')
+
+      p password: {{ controller.credentials.password }}
+    
+    button(type='submit') Submit
+
+  script(src='vendor.js')
+  script(src='angular-mn-password.js')
+  script.
+    angular.module('app', [
+      'mn-password',
+    ]);
+
+    angular
+      .module('app')
+      .controller('IndexController', IndexController);
+
+    function IndexController() {
+      this.credentials = {
+        username: undefined,
+        password: undefined,
+      }
+
+      this.validate = validate
+
+      function validate() {
+        var inputs = document.querySelectorAll('.mn-password')
+        Array
+          .from(inputs)
+          .forEach(function(input) {
+            input.validate()
+          })
+      }
+    }
+
