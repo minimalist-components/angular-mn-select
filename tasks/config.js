@@ -10,7 +10,7 @@ module.exports = {
     watch: './sources/styles/**/*.scss',
     dest: './dist/',
     sourcemaps: '/sources/styles',
-    output: 'angular-mn-password.css',
+    output: 'angular-mn-select.css',
   },
   scripts: {
     src: [
@@ -18,7 +18,7 @@ module.exports = {
       '!./sources/**/*.spec.js',
     ],
     dest: './dist/',
-    output: 'angular-mn-password.js',
+    output: 'angular-mn-select.js',
   },
   lintScripts: [
     './gulpfile.js',

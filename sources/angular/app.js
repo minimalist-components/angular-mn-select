@@ -1,1 +1,1 @@
-angular.module('mn-password', [])
+angular.module('mn-select', [])

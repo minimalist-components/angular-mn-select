@@ -1,10 +1,10 @@
 {
-  "name": "angular-mn-password",
+  "name": "angular-mn-select",
   "version": "0.0.1",
-  "description": "An angular directive to mn-password",
+  "description": "An angular directive to mn-select",
   "main": [
-    "dist/angular-mn-password.js",
-    "dist/angular-mn-password.css"
+    "dist/angular-mn-select.js",
+    "dist/angular-mn-select.css"
   ],
   "authors": [
     "Darlan Mendonça <darlanmendonca@gmail.com>"
@@ -12,7 +12,7 @@
   "license": "MIT",
   "homepage": "",
   "dependencies": {
-    "angular": "1.6.1",
-    "mn-password": "^0.0.2"
+    "angular": "^1.6.1",
+    "mn-select": "^0.0.9"
   }
 }

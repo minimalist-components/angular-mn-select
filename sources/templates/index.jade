@@ -3,7 +3,7 @@ html(ng-app='app')
   link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css')
   link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans')
   link(rel='stylesheet' href='styles/vendor.css')
-  link(rel='stylesheet' href='angular-mn-password.css')
+  link(rel='stylesheet' href='angular-mn-select.css')
   style.
     body {
       font-family: 'Open Sans', sans-serif;
@@ -11,20 +11,21 @@ html(ng-app='app')
     }
 
 body
-  form(ng-controller='IndexController as controller' name='form' novalidate ng-submit='controller.validate()')
-    h2 mn-password
+  form(ng-controller='IndexController as controller' name='form' novalidate)
+    h2 mn-select
+    p {{ controller.house }}
     div
-      mn-password(placeholder='Password' ng-model='controller.credentials.password' name='password')
-
-      p password: {{ controller.credentials.password }}
+      mn-select(placeholder='House' required ng-model='controller.house' style='width:500px')
+        option(ng-repeat='option in controller.options' ng-value='option.value') {{ option.text }}
+      
     
-    button(type='submit') Submit
+    //- button(type='submit') Submit
 
   script(src='vendor.js')
-  script(src='angular-mn-password.js')
+  script(src='angular-mn-select.js')
   script.
     angular.module('app', [
-      'mn-password',
+      'mn-select',
     ]);
 
     angular
@@ -32,20 +33,13 @@ body
       .controller('IndexController', IndexController);
 
     function IndexController() {
-      this.credentials = {
-        username: undefined,
-        password: undefined,
-      }
+      //- this.house = 'stark'
 
-      this.validate = validate
-
-      function validate() {
-        var inputs = document.querySelectorAll('.mn-password')
-        Array
-          .from(inputs)
-          .forEach(function(input) {
-            input.validate()
-          })
-      }
+      this.options = [
+        {text: 'Stark', value: 'stark'},
+        {text: 'Lannister', value: 'lannister'},
+        {text: 'Targaryen', value: 'targaryen'},
+        {text: 'Baratheon', value: 'baratheon'},
+      ]
     }
 
