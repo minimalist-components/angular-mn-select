@@ -2,8 +2,7 @@
   "name": "angular-mn-select",
   "description": "An angular directive to mn-select",
   "main": [
-    "dist/angular-mn-select.js",
-    "dist/angular-mn-select.css"
+    "dist/angular-mn-select.js"
   ],
   "authors": [
     "Darlan Mendonça <darlanmendonca@gmail.com>"
