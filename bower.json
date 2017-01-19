@@ -1,6 +1,5 @@
 {
   "name": "angular-mn-select",
-  "version": "0.0.2",
   "description": "An angular directive to mn-select",
   "main": [
     "dist/angular-mn-select.js",
@@ -13,6 +12,6 @@
   "homepage": "",
   "dependencies": {
     "angular": "^1.6.1",
-    "mn-select": "^0.0.10"
+    "mn-select": "^0.0.11"
   }
 }

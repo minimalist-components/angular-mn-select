@@ -16,7 +16,7 @@ body
     p {{ controller.house }}
     div
       mn-select(placeholder='House' required ng-model='controller.house' style='width:500px')
-        option(ng-repeat='option in controller.options' ng-value='option.value') {{ option.text }}
+        option(ng-repeat='option in controller.options' value='{{ option.value }}') {{ option.text }}
       
     
     //- button(type='submit') Submit
@@ -33,13 +33,13 @@ body
       .controller('IndexController', IndexController);
 
     function IndexController() {
-      //- this.house = 'stark'
+      this.house = {test: 'baratheon'}
 
       this.options = [
         {text: 'Stark', value: 'stark'},
         {text: 'Lannister', value: 'lannister'},
         {text: 'Targaryen', value: 'targaryen'},
-        {text: 'Baratheon', value: 'baratheon'},
+        {text: 'Baratheon', value: {test: 'baratheon'}},
       ]
     }
 
