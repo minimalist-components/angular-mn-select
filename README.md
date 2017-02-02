@@ -1,23 +1,20 @@
-[![Bower version](https://badge.fury.io/bo/angular-mn-select.svg)](https://badge.fury.io/bo/angular-mn-select)
+[![npm version](https://badge.fury.io/js/angular-mn-select.svg)](https://badge.fury.io/js/angular-mn-select)
 [![Dependency Status](https://gemnasium.com/badges/github.com/minimalist-components/angular-mn-select.svg)](https://gemnasium.com/github.com/minimalist-components/angular-mn-select)
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)   
-
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php) 
 
 # angular-mn-select
 
 An angular directive to [mn-select](https://github.com/minimalist-components/mn-select)
 
-See the [demo](https://minimalist-components.github.io/mn-select)
+See the [demo](https://minimalist-components.github.io/angular-mn-select)
 
-### install
-
-With bower
+### Install
 
 ```sh
-bower install --save angular-mn-select
+npm install --save angular-mn-select
 ```
 
-Or just download the main files, located in [dist/](https://github.com/minimalist-components/angular-mn-select/tree/master/dist)
+And bundle dependencies and main files in [dist/](https://github.com/minimalist-components/angular-mn-select/tree/master/dist) with your preferred tool.
 
 ### usage
 

@@ -2,7 +2,6 @@ import gulp from 'gulp'
 import {
   templates,
   scripts,
-  styles,
   browserSync,
 } from './config.js'
 
@@ -19,6 +18,4 @@ function watchTask() {
     'scripts',
     browserSync.reload,
   ])
-
-  gulp.watch(styles.watch, ['styles'])
 }

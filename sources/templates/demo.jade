@@ -1,0 +1,82 @@
+html(ng-app='app')
+  meta(name='viewport' content='width=device-width, user-scalable=no')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css')
+
+  block styles
+    link(rel='stylesheet' href='docs/vendor.css')
+
+body(ng-controller='IndexController as controller')
+  h2 angular-mn-select
+  include github-corner
+
+  .mn-layout-fullscreen.mn-layout-centered
+    .mn-layout-container
+      mn-form.mn-layout-column.mn-layout-sm-row
+        mn-select.flex-sm(placeholder='House' required ng-model='controller.house')
+          option(ng-repeat='option in controller.options' value='{{ option.value }}') {{ option.text }}
+
+
+  .docs.mn-layout-container
+    mn-code.sh.
+      npm install --save angular-mn-select
+
+    p And bundle dependencies and main files in <strong>dist/</strong> with your preferred tool.
+
+    mn-code.js.
+      // add dependency in you module
+      angular.module('app', [
+        'mn-select'
+      ])
+
+    p in your controller, you just need a array to be the values, similar to
+
+    mn-code.js.
+      angular
+        .module('app')
+        .controller('HousesController', HousesController)
+
+      function HousesController() {
+        // or $scope.options if you use $scope
+        this.options = [
+          {text: 'Stark', value: 'stark'},
+          {text: 'Lannister', value: 'lannister'},
+          {text: 'Targaryen', value: 'targaryen'},
+          {text: 'Baratheon', value: 'baratheon'},
+        ]
+      }
+
+    p finally in html, use the tags <strong>mn-select</strong> and <strong>option</strong>, and directives <strong>ng-repeat</strong> and <strong>ng-value</strong>, e.g.
+
+    mn-code.html.
+      <mn-select ng-model='houses' placeholder='Houses'>
+        <option ng-repeat="option in options" ng-value="option.value">{{ option.text }}</option>
+      </mn-select>
+
+    p For more details check <a href="https://github.com/minimalist-components/mn-select">mn-select docs</a>.
+
+
+
+  block scripts
+    script(src='docs/vendor.js')
+    script(src='dist/angular-mn-select.js')
+
+   script.
+    angular.module('app', [
+      'mn-select',
+    ]);
+
+    angular
+      .module('app')
+      .controller('IndexController', IndexController);
+
+    function IndexController() {
+      this.house = {test: 'baratheon'}
+
+      this.options = [
+        {text: 'Stark', value: 'stark'},
+        {text: 'Lannister', value: 'lannister'},
+        {text: 'Targaryen', value: 'targaryen'},
+        {text: 'Baratheon', value: {test: 'baratheon'}},
+      ]
+    }
+

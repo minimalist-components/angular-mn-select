@@ -1,45 +1,8 @@
-html(ng-app='app')
-  meta(name='viewport' content='width=device-width, user-scalable=no')
-  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css')
-  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans')
-  link(rel='stylesheet' href='styles/vendor.css')
-  link(rel='stylesheet' href='angular-mn-select.css')
-  style.
-    body {
-      font-family: 'Open Sans', sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
+extends demo
 
-body
-  form(ng-controller='IndexController as controller' name='form' novalidate)
-    h2 mn-select
-    p {{ controller.house }}
-    div
-      mn-select(placeholder='House' required ng-model='controller.house' style='width:500px')
-        option(ng-repeat='option in controller.options' value='{{ option.value }}') {{ option.text }}
-      
-    
-    //- button(type='submit') Submit
+block styles
+  link(rel='stylesheet' href='https://rawgit.com/minimalist-components/angular-mn-select/master/docs/vendor.css')
 
-  script(src='vendor.js')
-  script(src='angular-mn-select.js')
-  script.
-    angular.module('app', [
-      'mn-select',
-    ]);
-
-    angular
-      .module('app')
-      .controller('IndexController', IndexController);
-
-    function IndexController() {
-      this.house = {test: 'baratheon'}
-
-      this.options = [
-        {text: 'Stark', value: 'stark'},
-        {text: 'Lannister', value: 'lannister'},
-        {text: 'Targaryen', value: 'targaryen'},
-        {text: 'Baratheon', value: {test: 'baratheon'}},
-      ]
-    }
-
+block scripts
+  script(src='https://rawgit.com/minimalist-components/angular-mn-select/master/docs/vendor.js')
+  script(src='https://rawgit.com/minimalist-components/angular-mn-select/master/dist/angular-mn-select.js')
