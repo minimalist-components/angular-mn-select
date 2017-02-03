@@ -8,6 +8,8 @@ An angular directive to [mn-select](https://github.com/minimalist-components/mn-
 
 See the [demo](https://minimalist-components.github.io/angular-mn-select)
 
+[![preview demo](https://raw.githubusercontent.com/minimalist-components/mn-select/master/preview.gif)](https://minimalist-components.github.io/angular-mn-select/)
+
 ### Install
 
 ```sh
