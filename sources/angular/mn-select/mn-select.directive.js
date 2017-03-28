@@ -10,6 +10,7 @@ function MnSelectDirective($parse, $timeout) {
   }
 
   function link(scope, element, attributes, ngModel) {
+
     element.bind('change', (event) => {
       $timeout(() => {
         const value = event.target.value

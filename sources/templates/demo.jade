@@ -16,6 +16,9 @@ body(ng-controller='IndexController as controller')
           option(ng-repeat='option in controller.options' value='{{ option.value }}') {{ option.text }}
 
 
+      //- div(ng-repeat='option in controller.options') {{ option.text }}
+
+
   .docs.mn-layout-container
     mn-code.sh.
       npm install --save angular-mn-select
@@ -54,8 +57,6 @@ body(ng-controller='IndexController as controller')
 
     p For more details check <a href="https://github.com/minimalist-components/mn-select">mn-select docs</a>.
 
-
-
   block scripts
     script(src='docs/vendor.js')
     script(src='dist/angular-mn-select.js')
@@ -67,7 +68,7 @@ body(ng-controller='IndexController as controller')
 
     angular
       .module('app')
-      .controller('IndexController', IndexController);
+      .controller('IndexController', IndexController)
 
     function IndexController() {
       this.house = {test: 'baratheon'}
