@@ -1,6 +1,6 @@
 {
   "name": "angular-mn-select",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "An angular directive to mn-select",
   "main": "dist/angular-mn-select.js",
   "files": [
@@ -31,7 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "angular": "^1.6.1",
-    "mn-select": "~0.0.13"
+    "mn-select": "~0.0.14"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.14.0",
