@@ -19,6 +19,11 @@ function MnSelectDirective($parse, $timeout) {
       })
     })
 
+    scope.$watch(attributes.ngModel, (value) => {
+      // console.log(value)
+      element[0].value = value
+    })
+
     $timeout(() => {
       const value = $parse(attributes.ngModel)(scope)
       if (value) {
