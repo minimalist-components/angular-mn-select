@@ -6,7 +6,7 @@ html(ng-app='app')
     link(rel='stylesheet' href='docs/vendor.css')
 
 body(ng-controller='IndexController as controller')
-  h2 angular-mn-select {{ controller.house }}
+  h2 angular-mn-select
   include github-corner
 
   .mn-layout-fullscreen.mn-layout-centered
@@ -14,7 +14,7 @@ body(ng-controller='IndexController as controller')
       mn-form.mn-layout-column.mn-layout-sm-row
         mn-select.flex-sm(placeholder='House' required ng-model='controller.house')
           option(ng-repeat='option in controller.options' value='{{ option.value }}') {{ option.text }}
-        button(type='button' ng-click='controller.test()') run
+        //- button(type='button' ng-click='controller.test()') run
 
 
       //- div(ng-repeat='option in controller.options') {{ option.text }}
@@ -82,8 +82,8 @@ body(ng-controller='IndexController as controller')
         {text: 'Baratheon', value: {test: 'baratheon'}},
       ]
 
-      this.test = () => {
-        delete this.house
-      }
+      //- this.test = () => {
+      //-   delete this.house
+      //- }
     }
 
